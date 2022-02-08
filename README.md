@@ -19,6 +19,7 @@ with the UI with some mouse hovers and clicks.
 
 ### Media asset sources
 
+- [Hipster ipsum placeholder text](https://hipsum.co/)
 - [Google fonts](https://fonts.google.com/) - free
 - [Fontawesome icons](https://fontawesome.com/) - freemium
 - [Flaticon icons](https://fontawesome.com/) - freemium
