@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/638d441c12.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>test</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              ubuntu: "Ubuntu, sans-serif",
+              nanum: "Nanum Gothic, san-serif",
+            },
+            backgroundImage: {
+              "doggie-pattern": "url('doggie_pattern.jpg')",
+            },
+            backgroundSize: {
+              "doggie-pattern-size": "42rem",
+            },
+            backdropBlur: {
+              xs: "2px",
+            },
+            contrast: {
+              90: ".90",
+            },
+          },
+        },
+      };
+
+      const openMobileMenu = () => {
+        const mobileMenu = document.querySelector("#mobile-menu");
+        mobileMenu.style.display = "flex";
+      };
+
+      const closeMobileMenu = () => {
+        const mobileMenu = document.querySelector("#mobile-menu");
+        mobileMenu.style.display = "none";
+      };
+
+      const toggleMishka = () => {
+        const mishkaImg = document.querySelector("#mishka-img");
+        mishkaImg.src = mishkaImg.src.endsWith("team_mishka_portrait.png")
+          ? "./team_mishka_alt.jpg"
+          : "./team_mishka_portrait.png";
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      class="h-screen overflow-y-auto bg-doggie-pattern bg-doggie-pattern-size bg-repeat bg-fixed"
+    >
+      <div
+        class="bg-stone-50 hidden sm:flex justify-around items-center h-32 text-gray-400 text-2xl lg:px-24 font-ubuntu"
+      >
+        <div class="flex justify-between items-center">
+          <img class="w-20 mx-2" src="./images/dog_logo.png" />
+          <div class="text-3xl font-ubuntu text-amber-500">
+            airbn<span class="text-sky-600">bark</span>
+          </div>
+        </div>
+        <a class="flex items-center hover:text-sky-500" href="#mission">mission</a>
+        <a class="flex items-center hover:text-sky-500" href="#features">features</a>
+        <a class="flex items-center hover:text-sky-500" href="#team">team</a>
+        <a class="flex items-center hover:text-sky-500" href="#faq">faq</a>
+      </div>
+      <div class="bg-stone-50 h-32 flex justify-between sm:hidden items-center">
+        <div class="flex justify-between items-center ml-2">
+          <img class="w-20 mx-2" src="./images/dog_logo.png" />
+          <div class="text-3xl font-ubuntu text-amber-500">
+            airbn<span class="text-sky-600">bark</span>
+          </div>
+        </div>
+        <button class="p-2" onclick="openMobileMenu()">
+          <i class="fas fa-bars text-4xl text-stone-400 mr-6"></i>
+        </button>
+        <div
+          id="mobile-menu"
+          class="absolute hidden top-0 right-0 h-96 w-56 bg-orange-400 shadow-lg rounded-bl-md z-10"
+        >
+          <div
+            class="flex flex-col justify-around h-full pl-16 py-10 text-2xl font-ubuntu text-zinc-100"
+          >
+            <a class="flex items-center" href="#mission">mission</a>
+            <a class="flex items-center" href="#features">features</a>
+            <a class="flex items-center" href="#team">team</a>
+            <a class="flex items-center" href="#faq">faq</a>
+            <button class="absolute bottom-0 left-0 p-3" onclick="closeMobileMenu()">
+              <i class="fas fa-times text-4xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-stone-50 pt-10 pb-24 px-8">
+        <div class="flex justify-center">
+          <img class="w-96 lg:w-1/3 mx-2" src="./images/hero.png" />
+        </div>
+        <div class="flex flex-col items-center">
+          <div>
+            <div class="font-ubuntu text-2xl lg:text-3xl text-zinc-500 my-2">
+              Find dogsitters, seamlessly.
+            </div>
+            <div class="font-nanum text-lg sm:text-xl lg:text-2xl text-zinc-400">
+              airbnbark is the best platform to find experienced, loving dogsitters to keep an eye
+              on your best friend.
+            </div>
+            <button
+              class="mt-4 py-2 px-8 text-zinc-50 bg-sky-600 hover:bg-sky-500 rounded-md text-2xl font-ubuntu shadow-md"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mission" class="flex items-center flex-col py-24 px-8 bg-orange-400">
+        <div class="text-zinc-50 font-ubuntu text-4xl pb-3 px-6 mb-8 border-b-4 border-zinc-100">
+          Mission
+        </div>
+        <div class="md:w-3/4 font-nanum text-zinc-50 leading-loose md:text-lg md:leading-loose">
+          Keffiyeh asymmetrical pabst church-key kale chips. XOXO next level bitters, brunch
+          adaptogen unicorn everyday carry austin gastropub hella hashtag green juice cold-pressed.
+          Af live-edge tacos, narwhal master cleanse health goth kitsch microdosing literally.
+          Live-edge normcore cliche biodiesel glossier man bun. Fixie twee iceland, green juice
+          bicycle rights ugh vaporware subway tile mumblecore bespoke. Listicle meggings leggings,
+          letterpress master cleanse retro bushwick cray blue bottle selfies. Drinking vinegar vice
+          mustache next level paleo chartreuse. Affogato flexitarian polaroid leggings,
+          intelligentsia tumeric vinyl direct trade vape. Waistcoat four dollar toast flannel
+          readymade, drinking vinegar asymmetrical truffaut man bun meggings stumptown.
+        </div>
+        <img class="w-20 mt-16 contrast-90" src="./images/dog_white.png" />
+      </div>
+      <div id="features" class="flex justify-center bg-stone-50 py-24 md:px-16 lg:px-24 xl:px-36">
+        <div class="flex flex-wrap w-full">
+          <div class="flex justify-center w-full text-zinc-500 font-ubuntu text-4xl">
+            <div class="border-b-4 border-amber-500 pb-3 px-6 mb-12">Features</div>
+          </div>
+          <div class="w-full lg:w-1/2 my-7 px-5">
+            <div class="flex items-center text-lg mb-2">
+              <i class="text-center text-amber-600 w-14 mr-2 fas fa-dog text-4xl"></i>
+              <div class="text-zinc-500 font-ubuntu text-xl">company for your dog</div>
+            </div>
+            <div class="text-zinc-500 font-nanum px-2">
+              Man braid selvage chartreuse distillery pug, disrupt swag godard af dreamcatcher
+              heirloom bushwick irony. Shabby wolf moon affogato, prism ethical ugh craft beer cray.
+              Heirloom seitan semiotics butcher, polaroid vape aesthetic offal 3 wolf moon.
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 my-7 px-5">
+            <div class="flex items-center text-lg mb-2">
+              <i class="text-center text-sky-600 w-14 mr-2 far fa-bone text-4xl"></i>
+              <div class="text-zinc-500 font-ubuntu text-xl">treats and training</div>
+            </div>
+            <div class="text-zinc-500 font-nanum px-2">
+              Kitsch jean shorts pabst, vaporware tumblr hell of paleo shaman franzen selfies vape.
+              Hammock portland chia mixtape. Hot chicken small batch readymade pork belly. Yuccie
+              enamel pin 3 wolf moon, before they sold out church-key etsy.
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 my-7 px-5">
+            <div class="flex items-center text-lg mb-2">
+              <i class="text-center text-sky-600 w-14 mr-2 far fa-paw text-4xl"></i>
+              <div class="text-zinc-500 font-ubuntu text-xl">make doggo friends</div>
+            </div>
+            <div class="text-zinc-500 font-nanum px-2">
+              Enamel pin iceland banh mi swag. Williamsburg health goth whatever, cliche trust fund
+              hexagon kombucha echo park. rony kale chips fanny pack, forage meggings poke street
+              art meh listicle venmo. Tumblr letterpress chia wolf meditation, raw poke photo booth.
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 my-7 px-5">
+            <div class="flex items-center text-lg mb-2">
+              <i class="text-center text-amber-600 w-14 mr-2 fas fa-home-heart text-4xl"></i>
+              <div class="text-zinc-500 font-ubuntu text-xl">experienced dog sitters</div>
+            </div>
+            <div class="text-zinc-500 font-nanum px-2">
+              Seitan direct trade leggings, wayfarers fingerstache brooklyn wolf ugh roof party.
+              90's brunch venmo typewriter. Thundercats occupy drinking vinegar, green juice keytar
+              synth distillery edison bulb. Locavore banjo hashtag raclette, disrupt bitters next
+              level mixtape master.
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 my-7 px-5">
+            <div class="flex items-center text-lg mb-2">
+              <i
+                class="text-center text-amber-600 w-14 mr-2 fas fa-hand-holding-medical text-4xl"
+              ></i>
+              <div class="text-zinc-500 font-ubuntu text-xl">donate to a good cause</div>
+            </div>
+            <div class="text-zinc-500 font-nanum px-2">
+              Kale chips art party biodiesel chillwave jean shorts crucifix pork belly blue bottle
+              retro neutra. Roof party waistcoat thundercats farm-to-table. Kinfolk activated
+              charcoal DIY shoreditch, gluten-free snackwave occupy lo-fi.
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 my-7 px-5">
+            <div class="flex items-center text-lg mb-2">
+              <i class="text-center text-sky-600 w-14 mr-2 far fa-dog-leashed text-4xl"></i>
+              <div class="text-zinc-500 font-ubuntu text-xl">frequent walkies</div>
+            </div>
+            <div class="text-zinc-500 font-nanum px-2">
+              Lo-fi typewriter etsy letterpress, subway tile everyday carry sustainable authentic
+              scenester photo booth deep v brunch. Jean shorts single-origin coffee normcore,
+              messenger bag cronut neutra art party shaman vinyl.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-40 flex justify-center items-center shadow-inner">
+        <button
+          class="py-4 px-16 text-zinc-50 bg-sky-600 hover:bg-sky-500 rounded-lg text-3xl font-ubuntu shadow-md"
+        >
+          Sign Up
+        </button>
+      </div>
+      <div id="team" class="flex flex-col py-28 bg-stone-50">
+        <div class="flex justify-center">
+          <div
+            class="border-b-4 border-amber-500 pb-3 px-6 mb-14 text-zinc-500 font-ubuntu text-4xl"
+          >
+            Team
+          </div>
+        </div>
+        <div class="flex justify-around px-9 lg:px-24 flex-wrap">
+          <div class="flex flex-col items-center w-full py-4 md:py-0 m-4 lg:max-w-md">
+            <img
+              class="mb-4 w-48 rounded-full border-4 border-orange-300"
+              src="./images/team_me_portrait.png"
+            />
+            <div class="text-center text-zinc-600 font-ubuntu text-xl">Marielle Ednalino</div>
+            <div class="mt-1 text-center text-amber-600 text-lg font-nanum">
+              Chief Executive Officer
+            </div>
+            <div class="mt-3 text-zinc-500 font-nanum">
+              Authentic occupy etsy vinyl meh street art gluten-free. Bespoke art party quinoa
+              organic irony. Marfa edison bulb aesthetic chillwave yuccie cloud bread umami. Tumblr
+              mixtape shaman freegan. Craft beer swag forage truffaut messenger bag.
+            </div>
+          </div>
+          <div class="flex flex-col items-center w-full py-4 md:py-0 m-4 lg:max-w-md">
+            <img
+              class="mb-4 w-48 rounded-full border-4 border-orange-300"
+              src="./images/team_az_portrait.png"
+            />
+            <div class="text-center text-zinc-600 font-ubuntu text-xl">Alvin Zablan</div>
+            <div class="mt-1 text-center text-amber-600 text-lg font-nanum">
+              Chief Technology Officer
+            </div>
+            <div class="mt-3 text-zinc-500 font-nanum">
+              Craft beer swag forage truffaut messenger bag subway tile farm-to-table air plant.
+              Etsy master cleanse street art, everyday carry dreamcatcher disrupt umami. Tacos
+              brunch roof party stumptown godard. Food truck twee taxidermy cray tofu activated
+              charcoal humblebrag.
+            </div>
+          </div>
+          <div class="flex flex-col items-center w-full py-4 md:py-0 m-4 lg:max-w-md">
+            <img
+              id="mishka-img"
+              class="mb-4 w-48 rounded-full border-4 border-orange-300"
+              src="./images/./team_mishka_portrait.png"
+            />
+            <div class="text-center text-zinc-600 font-ubuntu text-xl pl-4">
+              Mishka McDog
+              <span
+                class="inline-flex h-4 w-4 relative hover:cursor-pointer"
+                onclick="toggleMishka()"
+              >
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-300 opacity-75"
+                ></span>
+                <span class="relative rounded-full h-4 w-4 bg-violet-400"></span>
+              </span>
+            </div>
+            <div class="mt-1 text-center text-amber-600 text-lg font-nanum">Chief Dog Officer</div>
+            <div class="mt-3 text-zinc-500 font-nanum">
+              Mixtape chambray yuccie subway tile, direct trade messenger bag actually blue bottle
+              next level fanny pack helvetica lyft echo park offal forage. Umami helvetica poke,
+              typewriter scenester kickstarter literally photo booth semiotics raw denim.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-sky-600 flex flex-col flex-wrap py-28 items-center">
+        <div class="flex justify-center">
+          <div
+            class="border-b-4 border-stone-50 pb-3 px-6 mb-14 text-stone-50 font-ubuntu text-4xl"
+          >
+            What our users say
+          </div>
+        </div>
+        <div class="flex justify-center flex-wrap">
+          <div
+            class="bg-stone-100 hover:scale-110 hover:bg-stone-50 transition-all flex flex-col items-center justify-between w-4/4 md:w-2/4 lg:w-1/4 p-6 shadow-md rounded-md m-6"
+          >
+            <img class="w-40 mb-2" src="./images/avatar_1.png" />
+            <div class="text-zinc-500 font-nanum">
+              <i class="fas fa-quote-left text-amber-500"></i>
+              Sriracha godard ramps, palo santo raw denim tilde man braid tote bag jean shorts
+              chartreuse keytar gluten-free hell of. Pork belly ethical polaroid raw denim 8-bit
+              banh mi brunch hashtag coloring book cray helvetica.
+              <i class="fas fa-quote-right text-amber-500"></i>
+            </div>
+            <div class="mt-4">
+              <span class="text-amber-500 font-ubuntu text-2xl mr-1">Alice F</span>
+              <span class="text-zinc-400 font-ubuntu text-md">airbnbark host - NYC</span>
+            </div>
+          </div>
+          <div
+            class="bg-stone-100 hover:scale-110 hover:bg-stone-50 transition-all flex flex-col items-center justify-between w-4/4 md:w-2/4 lg:w-1/4 p-6 shadow-md rounded-md m-6"
+          >
+            <img class="w-40 mb-2" src="./images/avatar_3.png" />
+            <div class="text-zinc-500 font-nanum">
+              <i class="fas fa-quote-left text-sky-600"></i>
+              Direct trade tote bag meggings small batch scenester wolf twee man bun forage 90's
+              gluten-free vice kinfolk wayfarers live-edge. Vinyl af iceland, twee skateboard lyft
+              bitters tacos.
+              <i class="fas fa-quote-right text-sky-600"></i>
+            </div>
+            <div class="mt-4">
+              <span class="text-sky-600 font-ubuntu text-2xl mr-1">Alex R</span>
+              <span class="text-zinc-400 font-ubuntu text-md">airbnbark guest - LA</span>
+            </div>
+          </div>
+          <div
+            class="bg-stone-100 hover:scale-110 hover:bg-stone-50 transition-all flex flex-col items-center justify-between w-4/4 md:w-2/4 lg:w-1/4 p-6 shadow-md rounded-md m-6"
+          >
+            <img class="w-40 mb-2" src="./images/avatar_2.png" />
+            <div class="text-zinc-500 font-nanum">
+              <i class="fas fa-quote-left text-amber-500"></i>
+              Ennui chillwave bitters prism ethical slow-carb man braid poke of. Actually food truck
+              flannel, iceland taiyaki vexillologist poke scenester bushwick. Deep v direct trade
+              normcore echo park vinyl street art before they sold out ennui bicycle rights.
+              <i class="fas fa-quote-right text-amber-500"></i>
+            </div>
+            <div class="mt-4">
+              <span class="text-amber-500 font-ubuntu text-2xl mr-1">Sadia C</span>
+              <span class="text-zinc-400 font-ubuntu text-md">airbnbark guest - SF</span>
+            </div>
+          </div>
+          <div
+            class="bg-stone-100 hover:scale-110 hover:bg-stone-50 transition-all flex flex-col items-center justify-between w-4/4 md:w-2/4 lg:w-1/4 p-6 shadow-md rounded-md m-6"
+          >
+            <img class="w-40 mb-2" src="./images/avatar_4.png" />
+            <div class="text-zinc-500 font-nanum">
+              <i class="fas fa-quote-left text-sky-600"></i>
+              Shabby chic mumblecore poke, offal brunch letterpress drinking vinegar activated
+              charcoal viral fanny pack umami 90's roof party vegan normcore. Pug gochujang, fund
+              echo park farm-to-table bicycle rights chillwave glossier brunch butcher listicle.
+              <i class="fas fa-quote-right text-sky-600"></i>
+            </div>
+            <div class="mt-4">
+              <span class="text-sky-600 font-ubuntu text-2xl mr-1">Sam E</span>
+              <span class="text-zinc-400 font-ubuntu text-md">airbnbark host - DAL</span>
+            </div>
+          </div>
+          <div
+            class="bg-stone-100 hover:scale-110 hover:bg-stone-50 transition-all flex flex-col items-center justify-between w-4/4 md:w-2/4 lg:w-1/4 p-6 shadow-md rounded-md m-6"
+          >
+            <img class="w-40 mb-2" src="./images/avatar_5.png" />
+            <div class="text-zinc-500 font-nanum">
+              <i class="fas fa-quote-left text-amber-500"></i>
+              Viral edison bulb iceland pop-up glossier ethical copper mug kogi beard kitsch pickled
+              meditation. Beard af trust fund literally hashtag pok pok authentic listicle roof
+              party poutine skateboard blog mumblecore yr.
+              <i class="fas fa-quote-right text-amber-500"></i>
+            </div>
+            <div class="mt-4">
+              <span class="text-amber-500 font-ubuntu text-2xl mr-1">Esperanza L</span>
+              <span class="text-zinc-400 font-ubuntu text-md">airbnbark guest - NYC</span>
+            </div>
+          </div>
+          <div
+            class="bg-stone-100 hover:scale-110 hover:bg-stone-50 transition-all flex flex-col items-center justify-between w-4/4 md:w-2/4 lg:w-1/4 p-6 shadow-md rounded-md m-6"
+          >
+            <img class="w-40 mb-2" src="./images/avatar_6.png" />
+            <div class="text-zinc-500 font-nanum">
+              <i class="fas fa-quote-left text-sky-600"></i>
+              Copper mug sriracha banh mi photo booth DIY palo santo shaman. Distillery yuccie
+              forage flannel, organic flexitarian pitchfork ethical kitsch affogato pinterest four
+              loko. Asymmetrical deep v kogi banh mi kitsch single-origin coffee pork belly bicycle
+              rights wolf cray four dollar toast narwhal.
+              <i class="fas fa-quote-right text-sky-600"></i>
+            </div>
+            <div class="mt-4">
+              <span class="text-sky-600 font-ubuntu text-2xl mr-1">Jen M</span>
+              <span class="text-zinc-400 font-ubuntu text-md">airbnbark host - CHI</span>
+            </div>
+          </div>
+        </div>
+        <img class="w-24 mt-20 contrast-90" src="./images/play_white.png" />
+      </div>
+      <div id="faq" class="bg-stone-50 flex flex-col items-center py-28 px-8 bg-stone-50">
+        <div class="flex justify-center">
+          <div
+            class="border-b-4 border-amber-500 pb-3 px-6 mb-14 text-zinc-500 font-ubuntu text-4xl"
+          >
+            Frequently Asked Questions
+          </div>
+        </div>
+        <div class="border-l-8 border-amber-500 py-2 px-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2 my-6">
+          <div class="text-zinc-500 font-ubuntu text-xl mb-2">
+            Small batch venmo iceland williamsburg, edison bulb migas?
+          </div>
+          <div class="text-zinc-400 font-nanum text-lg">
+            Tofu enamel pin selfies activated charcoal, kogi actually man braid. Knausgaard
+            pour-over meh pickled occupy PBR&B. Small batch venmo iceland. Poutine tilde unicorn
+            retro, mixtape green juice they sold out cold-pressed crucifix bicycle rights seitan
+            craft.
+          </div>
+        </div>
+        <div class="border-l-8 border-sky-600 py-2 px-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2 my-6">
+          <div class="text-zinc-500 font-ubuntu text-xl mb-2">
+            Tousled salvia semiotics roof party, helvetica sriracha shaman. Blog lomo echo park
+            edison bulb, asymmetrical artisan celiac before they sold out?
+          </div>
+          <div class="text-zinc-400 font-nanum text-lg">
+            Pabst DIY pickled, narwhal woke schlitz blog jianbing hashtag tofu sriracha
+            farm-to-table godard paleo. Shabby chic affogato humblebrag coloring book mixtape.
+          </div>
+        </div>
+        <div class="border-l-8 border-amber-500 py-2 px-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2 my-6">
+          <div class="text-zinc-500 font-ubuntu text-xl mb-2">
+            Coloring book taxidermy tacos, you probably haven't heard of them pour-over mixtape
+            green juice?
+          </div>
+          <div class="text-zinc-400 font-nanum text-lg">
+            Beard try-hard health goth mlkshk microdosing copper mug poutine green juice kale chips
+            tumblr edison bulb subway tile. Pitchfork chambray ugh, vinyl occupy small batch
+            slow-carb hella selfies.
+          </div>
+        </div>
+        <div class="border-l-8 border-sky-600 py-2 px-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2 my-6">
+          <div class="text-zinc-500 font-ubuntu text-xl mb-2">
+            Flexitarian celiac tumblr health goth cronut lyft. Mlkshk humblebrag cloud bread?
+          </div>
+          <div class="text-zinc-400 font-nanum text-lg">
+            Cliche pour-over chartreuse, vape cardigan +1 distillery vice brooklyn tacos.
+          </div>
+        </div>
+        <div class="border-l-8 border-amber-500 py-2 px-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2 my-6">
+          <div class="text-zinc-500 font-ubuntu text-xl mb-2">
+            Ethical austin fanny pack neutra ugh cloud bread. Street art godard beard shoreditch
+            listicle post-ironic. Selfies intelligentsia wayfarers?
+          </div>
+          <div class="text-zinc-400 font-nanum text-lg">
+            Bespoke hexagon jianbing godard pok pok VHS. Distillery pug chillwave, meditation shaman
+            dreamcatcher venmo normcore +1 tumblr whatever asymmetrical letterpress pok pok edison
+            bulb.
+          </div>
+        </div>
+        <img class="animate-bounce w-24 mt-16" src="./images/dog_love.png" />
+      </div>
+      <div class="h-40 bg-amber-500"></div>
+    </div>
+  </body>
+</html>
