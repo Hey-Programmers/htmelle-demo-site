@@ -7,7 +7,8 @@ create a similar site.
 
 The site design is responsive for mobile sizes up to desktop sizes. It also features a few dynamic
 elements, implemented using CSS tricks or trivial amounts of JavaScript. Leaving it to you to tinker
-with the UI with some mouse hovers and clicks.
+with the UI with some mouse hovers and clicks. Shrink the width of your browser window to view the
+site through a mobile POV as well.
 
 -AZ
 
