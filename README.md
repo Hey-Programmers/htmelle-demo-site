@@ -1,5 +1,7 @@
 # Htm.elle Demo Site
 
+Live Demo: https://hey-programmers.github.io/htmelle-demo-site/
+
 A demo site for the htm.elle program. At the conclusion of the course, students should be able to
 create a similar site.
 
